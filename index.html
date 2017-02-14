@@ -1,0 +1,221 @@
+<!--  урок анмиации http://html5book.ru/css3-animation/-->
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="space01_style.css"/>
+<script src="space01_jscript.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.2.js "></script>
+
+</head>
+<body>
+<div class="muz">
+  <p class="animated infinite tada">Заправлены в планшеты...
+	</p>
+	<audio controls>
+		<source src="sourse/plan6eti.mp3" type="audio/ogg; codecs=vorbis">
+		</source>
+	</audio>
+</div>
+
+<!--нло--------------------------------------------------------------------->
+   <div id="nlo01" class="z888" data-animation-name="nlo-1">
+		 <a href="#">
+			 <img class="nlo_style" src="sourse/fz4mgg5cnniedwaa0vgg.png">
+		 </a>
+	 </div>
+
+   <!--нло запуск по нажатию-->
+<script>
+	$(document).ready(function() {
+	$(".z888").click(function() {
+	  var elemData = $(this).attr("data-animation-name")
+	  $(this).toggleClass(elemData)
+		})
+	});
+</script>
+
+<!--звук нло-->
+<audio id="nlo_mp3" preload="auto"><source src="sourse/nlo(mp3cut.foxcom.su).mp3" type="audio/ogg"></audio>
+<script>
+var nlo_mp3 = $("#nlo_mp3")[0];
+$("#nlo01 a").click(function(){nlo_mp3.play();});
+</script>
+<!--нло end---------------------->
+
+<!--Гагарин----------------------------------------------------->
+<!-- надо прописать в диве имя анимации data-animation-name="name_ga00" , а в css описать эту анимацию -
+тесть в css юname_ga00 описать анимацию  -->
+  <div id="ga" class="z999" data-animation-name="name_ga00">
+		<a href="#"><img class="ga00" src="sourse/YUrij-Gagarin.jpeg"></a>
+	</div>
+<!-- при нажатии на блок z999 запуск анимации name_ga00 - смотри описание в ксс  -->
+<script>
+$(document).ready(function() {
+  $(".z999").click(function() {
+    var elemData = $(this).attr("data-animation-name")
+    $(this).toggleClass(elemData)
+  })
+});
+</script>
+
+<!--аудио ga-->
+<audio id="sound1" preload="auto">
+	<source src="sourse/poehali.mp3" type="audio/ogg">
+	</source>
+</audio>
+
+<script>
+var sound_ga = $("#sound_ga")[0];
+$("#ga a").click(function(){sound1.play();});
+</script>
+<!--Гагарин конец-------------------------------->
+
+<!--космонавт------------------------------------------>
+<div id="space_man" class="space_man_main" data-animation-name="space_man_move">
+	<a href="#"><img class="space_man" src="sourse/573990d894f7a154b8ddce22.png">
+	</a>
+</div>
+<!-- движ space_man -->
+<script>
+$(document).ready(function() {
+  $(".space_man_main").click(function() {
+    var elemData = $(this).attr("data-animation-name")
+    $(this).toggleClass(elemData)
+  })
+});
+</script>
+
+<!--аудио космонавт-->
+<audio id="sound_spaceman" preload="auto">
+	<source src="sourse/space_man(mp3cut.foxcom.su).mp3" type="audio/ogg">
+	</source>
+</audio>
+<script>
+var sound_spaceman = $("#sound_spaceman")[0];
+$("#space_man a").click(function(){sound_spaceman.play();});
+</script>
+
+<!--спутник sp_div право низ----------------------->
+<div class="sp_div" data-animation-name="sp1_move">
+	<img class="sp1" src="sourse/спутник.png"/>
+</div>
+<script>
+$(document).ready(function() {
+  $(".sp_div").click(function() {
+    var elemData = $(this).attr("data-animation-name")
+    $(this).toggleClass(elemData)
+  })
+});
+</script>
+<!-- звук sp_div  -->
+<audio id="sp_div_mp3" preload="auto">
+	<source src="sourse/01nlo.mp3" type="audio/ogg">
+	</source>
+</audio>
+<script>
+var sound_sp_div_mp3 = $("#sp_div_mp3")[0];
+$(".sp_div").click(function(){sound_sp_div_mp3.play();});
+</script>
+
+<!--метеор-->
+<div id="m1_main" class="" data-animation-name="m1_main_move">
+	<a href="#"><img class="m1" src="sourse/метеор.png"/>
+	</a>
+</div>
+<script>
+$(document).ready(function() {
+  $("#m1_main").click(function() {
+    var elemData = $(this).attr("data-animation-name")
+    $(this).toggleClass(elemData)
+  })
+});
+</script>
+
+<!--звук метеор-->
+<audio id="meteor_mp3" preload="auto">
+	<source src="sourse/meteor.mp3" type="audio/ogg">
+</audio>
+<script>
+var meteor_mp3 = $("#meteor_mp3")[0];
+$("#m1_main a").click(function(){meteor_mp3.play();});
+</script>
+
+<!--ракета лево низ-->
+<div id="r1" data-animation-name="r1_main_move">
+	<a href="#"><img class="r1" src="sourse/ракета.png"/>
+	</a>
+</div>
+<script>
+$(document).ready(function() {
+  $("#r1").click(function() {
+    var elemData = $(this).attr("data-animation-name")
+    $(this).toggleClass(elemData)
+  })
+});
+</script>
+<!--звук ракеты-->
+<audio id="sound2r" preload="auto"><source src="sourse/Raketu_zapustili.mp3" type="audio/ogg">
+</audio>
+<script>
+var sound2r_mp3 = $("#sound2r")[0];
+$("#r1 a").click(function(){sound2r_mp3.play();});
+</script>
+
+<!--спутник право верх-->
+<div id="sp" data-animation-name="sp0">
+	<a href="#">
+		<img class="spytnik" src="sourse/sputnik.png"/>
+	</a>
+</div>
+<script>
+$(document).ready(function() {
+  $("#sp").click(function() {
+    var elemData = $(this).attr("data-animation-name")
+    $(this).toggleClass(elemData)
+  })
+});
+</script>
+<!-- звук спутник -->
+<audio id="spytnik_mp3" preload="auto">
+	<source src="sourse/1957.mp3" type="audio/ogg">
+	</source>
+</audio>
+<!-- звук по нажатию спутник-->
+<script>
+var spytnik_mp3 = $("#spytnik_mp3")[0];
+$("#sp a").click(function(){spytnik_mp3.play();});
+</script>
+
+<!-- земял -->
+<div>
+	<img class="zemlj" src="sourse/Earth.png"/>
+</div>
+<!-- солнце  -->
+<div id="">
+	<img class="sun" src="sourse/солнце.png"/>
+</div>
+
+<!--Супермен-->
+<div>
+	<img class="sm" src="sourse/sm.png"/>
+</div>
+
+
+<!--Звезда-->
+<div class="star_move">
+	<a href="#"><img class="star" src="sourse/zv.png"/></a>
+</div>
+
+
+
+<!--НЛО-->
+<!-- <div  id="stage"><img class="nlo" src="sourse/nlo.png"/>
+</div> -->
+
+
+</body>
+</html>
